@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ClientServerFinal.Models;
+using Server.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClientServerFinal.Data;
+namespace Server.Data;
 
 public partial class MyContext : DbContext
 {

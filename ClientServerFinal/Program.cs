@@ -1,4 +1,4 @@
-using ClientServerFinal.Data;
+using Server.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
