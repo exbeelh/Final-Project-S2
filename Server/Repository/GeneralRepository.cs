@@ -24,10 +24,11 @@ public class GeneralRepository<TEntity, TKey, TContext> : IGeneralRepository<TEn
         return await _context.Set<TEntity>().FindAsync(key);
     }
 
-    public async Task InsertAsync(TEntity entity)
+    public async Task<TEntity?> InsertAsync(TEntity entity)
     {
         await _context.Set<TEntity>().AddAsync(entity);
         await _context.SaveChangesAsync();
+        return entity;
     }
 
     public async Task UpdateAsync(TEntity entity)
