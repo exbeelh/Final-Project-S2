@@ -7,15 +7,15 @@ using System.Net;
 namespace Server.Base
 {
     [ApiController]
-    [Route("api/[controller]")]
-    [Authorize]
-    public class GeneralController<TIRepository, TEntity, TKey> : ControllerBase
+    [Route("api/v1/[controller]")]
+    // [Authorize]
+    public class BaseController<TIRepository, TEntity, TKey> : ControllerBase
         where TEntity : class
         where TIRepository : IGeneralRepository<TEntity, TKey>
     {
         protected TIRepository _repository;
 
-        public GeneralController(TIRepository repository)
+        public BaseController(TIRepository repository)
         {
             _repository = repository;
         }
@@ -81,12 +81,6 @@ namespace Server.Base
         {
             try
             {
-                if (id!.Equals(entity.GetType().GetProperty("Id")) ||
-                    id.Equals(entity.GetType().GetProperty("Nik")))
-                {
-                    return BadRequest();
-                }
-
                 if (!await _repository.IsExist(id))
                 {
                     return NotFound(new
@@ -96,6 +90,8 @@ namespace Server.Base
                         message = $"Data with id {id} not found."
                     });
                 }
+
+                await _repository.UpdateAsync(entity);
             }
             catch (DbUpdateConcurrencyException)
             {

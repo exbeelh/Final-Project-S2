@@ -1,4 +1,7 @@
 using Server.Data;
+using Server.Models;
+using Server.Repository.Data;
+using Server.Repository.Contracts;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -21,6 +24,10 @@ builder.Services.AddCors(options =>
 // Configure connection string
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MyContext>(options => options.UseSqlServer(connectionString));
+
+// Configure Dependency Injection
+builder.Services.AddScoped<IUniversityRepository, UniversityRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 // Add services to the container.
 

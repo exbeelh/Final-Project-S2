@@ -2,12 +2,12 @@
 using Server.Data;
 
 namespace Server.Repository;
-public class GeneralRepository<TEntity, TKey, TContext> : IGeneralRepository<TEntity, TKey> 
-    where TEntity : class 
-    where TContext : MyContext 
+public class GeneralRepository<TEntity, TKey, TContext> : IGeneralRepository<TEntity, TKey>
+    where TEntity : class
+    where TContext : MyContext
 {
     protected TContext _context;
-        
+
     public GeneralRepository(TContext context)
     {
         _context = context;
@@ -24,7 +24,7 @@ public class GeneralRepository<TEntity, TKey, TContext> : IGeneralRepository<TEn
         return await _context.Set<TEntity>().FindAsync(key);
     }
 
-    public async Task InsertAsync(TEntity entity)
+     public async Task InsertAsync(TEntity entity)
     {
         await _context.Set<TEntity>().AddAsync(entity);
         await _context.SaveChangesAsync();
