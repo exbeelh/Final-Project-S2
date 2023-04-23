@@ -29,6 +29,12 @@ builder.Services.AddDbContext<MyContext>(options => options.UseSqlServer(connect
 builder.Services.AddScoped<IUniversityRepository, UniversityRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
+// Configure MVC
+builder.Services.AddMvc(options =>
+{
+    options.SuppressAsyncSuffixInActionNames = false;
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
