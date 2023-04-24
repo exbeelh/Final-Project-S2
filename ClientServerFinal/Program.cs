@@ -27,6 +27,11 @@ builder.Services.AddDbContext<MyContext>(options => options.UseSqlServer(connect
 
 // Configure Dependency Injection
 builder.Services.AddScoped<IUniversityRepository, UniversityRepository>();
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IAccountRoleRepository, AccountRoleRepository>();
+builder.Services.AddScoped<IEducationRepository, EducationRepository>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IProfilingRepository, ProfilingRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 // Configure MVC

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Server.Utils;
 
 namespace Server.Models;
 
@@ -13,7 +14,7 @@ public partial class Employee
 
     public DateTime Birthdate { get; set; }
 
-    public int Gender { get; set; }
+    public GenderEnum Gender { get; set; }
 
     public DateTime HiringDate { get; set; }
 
