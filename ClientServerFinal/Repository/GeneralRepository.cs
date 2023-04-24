@@ -24,7 +24,7 @@ public class GeneralRepository<TEntity, TKey, TContext> : IGeneralRepository<TEn
         return await _context.Set<TEntity>().FindAsync(key);
     }
 
-     public async Task<TEntity?> InsertAsync(TEntity entity)
+     public virtual async Task<TEntity?> InsertAsync(TEntity entity)
     {
         await _context.Set<TEntity>().AddAsync(entity);
         await _context.SaveChangesAsync();
