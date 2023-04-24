@@ -64,8 +64,6 @@ namespace ClientServerFinal.Repository.Data
                                                                group new { employee, education, university } by new { education.Major, university.Name }
                                                                into g
                                                                let avgGPA = g.Average(x => x.education.Gpa)
-                                                               from employee in g
-                                                               where employee.education.Gpa > avgGPA
                                                                select new EmployeeGpaVM
                                                                {
                                                                    Major = g.Key.Major,
