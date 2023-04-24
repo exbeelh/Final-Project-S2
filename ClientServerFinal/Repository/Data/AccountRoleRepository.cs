@@ -1,27 +1,29 @@
-using Server.Data;
+﻿using Server.Data;
 using Server.Models;
 using Server.Repository;
 using Server.Repository.Contracts;
 
-namespace Server.Repository.Data;
-
-public class AccountRoleRepository : GeneralRepository<AccountRole, int, MyContext>, IAccountRoleRepository
+namespace ClientServerFinal.Repository.Data
 {
-    private readonly IRoleRepository _roleRepository;
-    public AccountRoleRepository(MyContext context, IRoleRepository roleRepository) : base(context)
+    public class AccountRoleRepository : GeneralRepository<AccountRole, int, MyContext>, IAccountRoleRepository
     {
-        _roleRepository = roleRepository;
-    }
+        private readonly IRoleRepository _roleRepository;
 
-    public async Task<IEnumerable<string>> GetRolesByNikAsync(string nik)
-    {
-        var getAccountRoleByAccountNik = GetAllAsync().Result.Where(x => x.AccountNik == nik);
-        var getRole = await _roleRepository.GetAllAsync();
+        public AccountRoleRepository(MyContext context, IRoleRepository roleRepository) : base(context)
+        {
+            _roleRepository = roleRepository;
+        }
 
-        var getRoleByNik = from ar in getAccountRoleByAccountNik
-                           join r in getRole on ar.RoleId equals r.Id
-                           select r.Name;
+        public async Task<IEnumerable<string>> GetRolesByNikAsync(string nik)
+        {
+            var getAccountRoleByAccountNik = GetAllAsync().Result.Where(x => x.AccountNik == nik);
+            var getRole = await _roleRepository.GetAllAsync();
 
-        return getRoleByNik;
+            var getRoleByNik = from ar in getAccountRoleByAccountNik
+                               join r in getRole on ar.RoleId equals r.Id
+                               select r.Name;
+
+            return getRoleByNik;
+        }
     }
 }
