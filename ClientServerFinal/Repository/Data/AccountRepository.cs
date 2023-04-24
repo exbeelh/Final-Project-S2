@@ -99,16 +99,34 @@ public class AccountRepository : GeneralRepository<Account, string, MyContext>, 
 
     public async Task<UserDataVM> GetUserData(string email)
     {
-        throw new NotImplementedException();
+        var getEmployees = await _employeeRepository.GetAllAsync();
+        var getAccounts = await GetAllAsync();
+
+        var getUserData = getEmployees.Join(getAccounts,
+                                            e => e.Nik,
+                                            a => a.EmployeeNik,
+                                            (e, a) => new UserDataVM {
+                                                FullName = e.FirstName + " " + e.LastName,
+                                                Email = e.Email
+                                            })
+                                      .FirstOrDefault(ud => ud.Email == email);
+
+        return getUserData;
     }
 
     public async Task<IEnumerable<string>> GetRolesByEmail(string email)
     {
-        throw new NotImplementedException();
+        var getNIK = await _employeeRepository.GetUserDataByEmailAsync(email);
+        var getRoles = await _accountRoleRepository.GetRolesByNikAsync(getNIK!.Nik);
+
+        return getRoles;
     }
 
     public async Task<Account?> GetByEmail(string email)
     {
-        throw new NotImplementedException();
+        var getNIK = await _employeeRepository.GetUserDataByEmailAsync(email);
+        var getAccount = await GetByIdAsync(getNIK!.Nik);
+
+        return getAccount;
     }
 }
