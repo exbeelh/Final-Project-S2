@@ -20,8 +20,13 @@ namespace ClientServerFinal.Controllers
         {
             try
             {
-                var data = await _repository.GetEmployeesByLengthOfWorkDescending();
-                return Ok(data);
+                var entity = await _repository.GetEmployeesByLengthOfWorkDescending();
+                return Ok(new
+                {
+                    code = StatusCodes.Status200OK,
+                    status = HttpStatusCode.OK.ToString(),
+                    data = entity
+                });
             }
             catch
             {
