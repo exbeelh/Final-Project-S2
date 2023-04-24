@@ -1,4 +1,4 @@
-﻿namespace ClientServerFinal.ViewModel
+﻿namespace ClientServerFinal.ViewModels
 {
     public class EmployeeTotalVM
     {

@@ -1,6 +1,6 @@
 ﻿using ClientServerFinal.Utils;
 
-namespace ClientServerFinal.ViewModel
+namespace ClientServerFinal.ViewModels
 {
     public class EmployeeProfileVM
     {
