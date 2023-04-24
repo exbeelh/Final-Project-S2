@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using ClientServerFinal.Utils;
 
 namespace ClientServerFinal.Models;
@@ -22,7 +23,9 @@ public partial class Employee
 
     public string Phone { get; set; } = null!;
 
+    [JsonIgnore]
     public virtual Account? Account { get; set; }
 
+    [JsonIgnore]
     public virtual Profiling? Profiling { get; set; }
 }

@@ -1,16 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ClientServerFinal.Base;
 using ClientServerFinal.Models;
 using ClientServerFinal.Repository.Contracts;
-using System.Data;
 using System.Net;
 
 namespace ClientServerFinal.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class EducationsController : BaseController<IEducationRepository, Education, int>
     {

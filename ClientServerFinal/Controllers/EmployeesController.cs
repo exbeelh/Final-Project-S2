@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace ClientServerFinal.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class EmployeesController : BaseController<IEmployeeRepository, Employee, string>
     {

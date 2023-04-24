@@ -2,7 +2,6 @@ using ClientServerFinal.Data;
 using ClientServerFinal.Models;
 using ClientServerFinal.Handlers;
 using ClientServerFinal.ViewModels;
-using ClientServerFinal.Repository;
 using ClientServerFinal.Repository.Contracts;
 
 namespace ClientServerFinal.Repository.Data;

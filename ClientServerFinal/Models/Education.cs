@@ -1,4 +1,6 @@
-﻿namespace ClientServerFinal.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace ClientServerFinal.Models;
 
 public partial class Education
 {
@@ -12,7 +14,9 @@ public partial class Education
 
     public int UniversityId { get; set; }
 
+    [JsonIgnore]
     public virtual Profiling? Profiling { get; set; }
-
+    
+    [JsonIgnore]
     public virtual University University { get; set; } = null!;
 }
