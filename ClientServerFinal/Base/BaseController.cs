@@ -9,13 +9,13 @@ namespace Server.Base
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
-    public class GeneralController<TIRepository, TEntity, TKey> : ControllerBase
+    public class BaseController<TIRepository, TEntity, TKey> : ControllerBase
         where TEntity : class
         where TIRepository : IGeneralRepository<TEntity, TKey>
     {
         protected TIRepository _repository;
 
-        public GeneralController(TIRepository repository)
+        public BaseController(TIRepository repository)
         {
             _repository = repository;
         }
