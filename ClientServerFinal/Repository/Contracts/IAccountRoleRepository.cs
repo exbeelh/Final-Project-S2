@@ -1,6 +1,6 @@
-﻿using Server.Models;
+﻿using ClientServerFinal.Models;
 
-namespace Server.Repository.Contracts;
+namespace ClientServerFinal.Repository.Contracts;
 public interface IAccountRoleRepository : IGeneralRepository<AccountRole, int>
 {
     Task<IEnumerable<string>> GetRolesByNikAsync(string nik);

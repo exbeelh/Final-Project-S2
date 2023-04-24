@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Server.Repository;
+using ClientServerFinal.Repository;
 using System.Net;
 
-namespace Server.Base
+namespace ClientServerFinal.Base
 {
     [ApiController]
     [Route("api/[controller]")]

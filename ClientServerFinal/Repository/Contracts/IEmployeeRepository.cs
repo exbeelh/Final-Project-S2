@@ -1,7 +1,7 @@
-﻿using Server.Models;
-using Server.ViewModels;
+﻿using ClientServerFinal.Models;
+using ClientServerFinal.ViewModels;
 
-namespace Server.Repository.Contracts;
+namespace ClientServerFinal.Repository.Contracts;
 public interface IEmployeeRepository : IGeneralRepository<Employee, string>
 {
     Task<UserDataVM> GetUserDataByEmailAsync(string email);

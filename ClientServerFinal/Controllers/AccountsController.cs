@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
-using Server.Base;
-using Server.Models;
-using Server.ViewModels;
-using Server.Repository.Contracts;
-using Server.Handlers.Contracts;
+using ClientServerFinal.Base;
+using ClientServerFinal.Models;
+using ClientServerFinal.ViewModels;
+using ClientServerFinal.Repository.Contracts;
+using ClientServerFinal.Handlers.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using System.Net;
 using System.Security.Claims;
 
-namespace Server.Controllers;
+namespace ClientServerFinal.Controllers;
 
 [ApiController]
 [Route("api/v1/[controller]")]

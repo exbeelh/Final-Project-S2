@@ -1,6 +1,7 @@
-﻿using Server.Models;
+﻿using ClientServerFinal.Models;
+using ClientServerFinal.ViewModels;
 
-namespace Server.Repository.Contracts;
+namespace ClientServerFinal.Repository.Contracts;
 public interface IAccountRepository : IGeneralRepository<Account, string>
 {
     Task<int> Register(RegisterVM registerVM);

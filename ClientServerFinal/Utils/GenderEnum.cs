@@ -1,4 +1,4 @@
-namespace Server.Utils;
+namespace ClientServerFinal.Utils;
 
 public enum GenderEnum
 {

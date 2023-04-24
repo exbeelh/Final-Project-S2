@@ -1,9 +1,9 @@
-using Server.Data;
-using Server.Models;
-using Server.Repository.Data;
-using Server.Repository.Contracts;
-using Server.Handlers.Contracts;
-using Server.Handlers;
+using ClientServerFinal.Data;
+using ClientServerFinal.Models;
+using ClientServerFinal.Repository.Data;
+using ClientServerFinal.Repository.Contracts;
+using ClientServerFinal.Handlers.Contracts;
+using ClientServerFinal.Handlers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

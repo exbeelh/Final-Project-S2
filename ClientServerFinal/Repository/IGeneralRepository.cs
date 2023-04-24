@@ -1,4 +1,4 @@
-﻿namespace Server.Repository;
+﻿namespace ClientServerFinal.Repository;
 
 public interface IGeneralRepository<TEntity, TKey> where TEntity : class
 {

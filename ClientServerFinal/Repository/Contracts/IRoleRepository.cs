@@ -1,4 +1,4 @@
-﻿using Server.Models;
+﻿using ClientServerFinal.Models;
 
-namespace Server.Repository.Contracts;
+namespace ClientServerFinal.Repository.Contracts;
 public interface IRoleRepository : IGeneralRepository<Role, int> { }

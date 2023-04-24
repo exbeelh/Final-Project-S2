@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Server.Base;
-using Server.Models;
-using Server.Repository.Contracts;
+using ClientServerFinal.Base;
+using ClientServerFinal.Models;
+using ClientServerFinal.Repository.Contracts;
 
 namespace ClientServerFinal.Controllers
 {

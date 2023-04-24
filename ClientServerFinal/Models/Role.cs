@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Server.Models;
+namespace ClientServerFinal.Models;
 
 public partial class Role
 {

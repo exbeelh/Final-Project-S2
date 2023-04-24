@@ -1,7 +1,7 @@
-using Server.Models;
-using Server.Utils;
+using ClientServerFinal.Models;
+using ClientServerFinal.Utils;
 
-namespace Server.ViewModels;
+namespace ClientServerFinal.ViewModels;
 
 public class RegisterVM
 {

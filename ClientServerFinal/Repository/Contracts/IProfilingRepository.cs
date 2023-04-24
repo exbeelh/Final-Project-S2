@@ -1,6 +1,6 @@
-﻿using Server.Models;
+﻿using ClientServerFinal.Models;
 
-namespace Server.Repository.Contracts;
+namespace ClientServerFinal.Repository.Contracts;
 public interface IProfilingRepository : IGeneralRepository<Profiling, string>
 {
 

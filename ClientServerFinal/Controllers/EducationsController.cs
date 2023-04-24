@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Server.Base;
-using Server.Models;
-using Server.Repository.Contracts;
+using ClientServerFinal.Base;
+using ClientServerFinal.Models;
+using ClientServerFinal.Repository.Contracts;
 using System.Data;
 using System.Net;
 

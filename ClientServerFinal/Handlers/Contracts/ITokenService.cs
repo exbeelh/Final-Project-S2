@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace Server.Handlers.Contracts;
+namespace ClientServerFinal.Handlers.Contracts;
 
 public interface ITokenService
 {

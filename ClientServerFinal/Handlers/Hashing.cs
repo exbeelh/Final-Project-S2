@@ -1,4 +1,4 @@
-namespace Server.Handlers;
+namespace ClientServerFinal.Handlers;
 
 public class Hashing
 {

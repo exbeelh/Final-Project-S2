@@ -1,11 +1,11 @@
-using Server.Handlers.Contracts;
+using ClientServerFinal.Handlers.Contracts;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Server.Handlers;
+namespace ClientServerFinal.Handlers;
 
 public class TokenService : ITokenService
 {

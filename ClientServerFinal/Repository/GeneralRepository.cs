@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Server.Data;
+using ClientServerFinal.Data;
 
-namespace Server.Repository;
+namespace ClientServerFinal.Repository;
 public class GeneralRepository<TEntity, TKey, TContext> : IGeneralRepository<TEntity, TKey>
     where TEntity : class
     where TContext : MyContext

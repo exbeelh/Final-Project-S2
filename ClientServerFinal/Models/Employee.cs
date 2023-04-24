@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Server.Utils;
+using ClientServerFinal.Utils;
 
-namespace Server.Models;
+namespace ClientServerFinal.Models;
 
 public partial class Employee
 {

@@ -1,9 +1,9 @@
-using Server.Data;
-using Server.Models;
-using Server.Repository;
-using Server.Repository.Contracts;
+using ClientServerFinal.Data;
+using ClientServerFinal.Models;
+using ClientServerFinal.Repository;
+using ClientServerFinal.Repository.Contracts;
 
-namespace Server.Repository.Data;
+namespace ClientServerFinal.Repository.Data;
 
 public class RoleRepository : GeneralRepository<Role, int, MyContext>, IRoleRepository
 {

@@ -1,4 +1,4 @@
-namespace Server.ViewModels;
+namespace ClientServerFinal.ViewModels;
 
 public class UserDataVM
 {
