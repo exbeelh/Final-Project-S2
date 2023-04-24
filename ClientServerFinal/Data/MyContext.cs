@@ -54,11 +54,11 @@ public partial class MyContext : DbContext
 
         modelBuilder.Entity<AccountRole>(entity =>
         {
-            entity.ToTable("TB_M_Account_Roles");
+            entity.ToTable("TB_TR_Account_Roles");
 
-            entity.HasIndex(e => e.AccountNik, "IX_TB_M_Account_Roles_account_nik");
+            entity.HasIndex(e => e.AccountNik, "IX_TB_TR_Account_Roles_account_nik");
 
-            entity.HasIndex(e => e.RoleId, "IX_TB_M_Account_Roles_role_id");
+            entity.HasIndex(e => e.RoleId, "IX_TB_TR_Account_Roles_role_id");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.AccountNik)
