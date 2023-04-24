@@ -81,12 +81,6 @@ namespace Server.Base
         {
             try
             {
-                if (id!.Equals(entity.GetType().GetProperty("Id")) ||
-                    id.Equals(entity.GetType().GetProperty("Nik")))
-                {
-                    return BadRequest();
-                }
-
                 if (!await _repository.IsExist(id))
                 {
                     return NotFound(new
@@ -96,6 +90,8 @@ namespace Server.Base
                         message = $"Data with id {id} not found."
                     });
                 }
+
+                await _repository.UpdateAsync(entity);
             }
             catch (DbUpdateConcurrencyException)
             {
